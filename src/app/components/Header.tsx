@@ -26,10 +26,16 @@ function Header({ handleSideBar }: { handleSideBar: () => void }) {
             <p className="col-span-11  text-center row-start-1 font-bold">
                 McDonald &apos;s
             </p>
-            <input
-                type="search"
-                className="col-span-12  row-start-3 mt-4 md:mt-0 lg:row-start-1 lg:col-span-5 lg:mr-2"
-            />
+            <label className="relative col-span-12 rounded  row-start-3 mt-4 md:mt-0 lg:row-start-1 lg:col-span-5 lg:mr-2">
+                <Image className="absolute top-3 left-2" width={13} height={13} src='/search.svg' alt="search"/>
+                <input
+                    placeholder="search"
+                    type="Search"
+                    className="pl-7 py-2 w-full placeholder:text-gray-400 rounded"
+                />
+                <span className="absolute top-3 text-[14px] right-2">⌘/</span>
+            </label>
+
             <div className="row-start-1 col-span-1 flex items-center gap-1 ">
                 <Image
 
