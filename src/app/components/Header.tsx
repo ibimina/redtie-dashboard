@@ -3,7 +3,7 @@ import Image from "next/image";
 function Header({ handleSideBar }: { handleSideBar: () => void }) {
     return (
         <header className="bg-grey shadow grid grid-cols-12 p-3 lg:items-center px-6 py-4">
-            <div className="relative row-start-2 mt-2 col-span-6 lg:col-span-3 flex flex-col lg:flex-row lg:gap-2 lg:row-start-1 lg:mt-0 lg:items-center ">
+            <div className="relative row-start-2 mt-2 col-span-6 lg:col-span-4 flex flex-col lg:flex-row lg:gap-2 lg:row-start-1 lg:mt-0 lg:items-center ">
                 <button
                     onClick={handleSideBar}
                     className="absolute -top-7 lg:relative lg:top-0"
@@ -26,8 +26,8 @@ function Header({ handleSideBar }: { handleSideBar: () => void }) {
             <p className="col-span-11  text-center row-start-1 font-bold">
                 McDonald &apos;s
             </p>
-            <label className="relative col-span-12 rounded  row-start-3 mt-4 md:mt-0 lg:row-start-1 lg:col-span-5 lg:mr-2">
-                <Image className="absolute top-3 left-2" width={13} height={13} src='/search.svg' alt="search"/>
+            <label className="relative col-span-12 rounded  row-start-3 mt-4 md:mt-0 lg:row-start-1 lg:col-span-4 lg:mr-2">
+                <Image className="absolute top-3 left-2" width={13} height={13} src='/search.svg' alt="search" />
                 <input
                     placeholder="search"
                     type="Search"
