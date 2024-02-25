@@ -23,10 +23,16 @@ export default function Home() {
     <main className="lg:flex lg:justify-end">
       <button
         onClick={handleSideBar}
-        className={` ${isSideBarOpen ? "absolute right-3 z-50 top-2" : "hidden"
+        className={` ${isSideBarOpen ? "absolute right-3 z-[1000] top-3 " : "hidden"
           } lg:hidden`}
       >
-        close
+        <Image
+          width={34}
+          height={34}
+          src="/close.svg"
+          alt="close"
+          className="rotate-45"
+        />
       </button>
       <SideBar isSideBarOpen={isSideBarOpen} />
       <div
@@ -35,15 +41,32 @@ export default function Home() {
       >
         <Header handleSideBar={handleSideBar} />
         <section className="px-6 py-6 overflow-x-auto">
-          <Filters handleFilter={handleFilter} isFilterOpen={isFilterOpen}/>
+          <Filters handleFilter={handleFilter} isFilterOpen={isFilterOpen} />
           <TableEdits />
           <Table />
           <div className="shadow p-3 mt-3 w-full">
-            <p className="text-[grey]">MORE</p>
+            <div className="flex items-center gap-2">
+              <p className="text-[grey] text-[12px]">MORE</p>
+              <Image
+                src='/arrowdown.svg'
+                alt="arrow down"
+                className="-rotate-90"
+                width={15}
+                height={15}
+              />
+            </div>
           </div>
           <div className="flex flex-col md:flex-row justify-end gap-3 my-4 text-[10px]">
             <p>Linhas por página:5</p>
-            <p>1-5 de 50</p>
+            <div className="flex items-center gap-2">
+              <Image
+                src='/arrowdown.svg'
+                alt="arrow down"
+                width={15}
+                height={15}
+              />
+              <p>1-5 de 50</p>
+            </div>
             <div className="flex items-center gap-5">
               <Image
                 src="/arrowright.svg"
