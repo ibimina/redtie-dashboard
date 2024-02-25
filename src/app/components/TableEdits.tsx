@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 function TableEdits() {
-    return (<div className="flex flex-col md:flex-row justify-end gap-3">
+    return (
+    <div className="flex flex-col md:flex-row justify-end gap-3 mt-3">
         <input
             className="border-2 border-[rgba(58, 53, 65, 0.29)] placeholder-[rgba(58, 53, 65, 0.38)] p-2 rounded"
             type="search"
