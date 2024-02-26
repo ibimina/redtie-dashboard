@@ -20,6 +20,7 @@ function SideBar({ isSideBarOpen }: {
     }
     return (
         <div
+            data-testid="side-bar"
             className={`${isSideBarOpen
                 ? "flex w-7/12 md:w-4/12 fixed z-50 shadow-3xl lg:shadow-none lg:hidden"
                 : "hidden lg:block"

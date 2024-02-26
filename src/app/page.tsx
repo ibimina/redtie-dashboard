@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <main className="lg:flex lg:justify-end">
       <button
+        data-testid="custom-menu"
         onClick={handleSideBar}
         className={` ${isSideBarOpen ? "absolute right-3 z-[1000] top-3 " : "hidden"
           } lg:hidden`}
